@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="track"
+            type="com.kirdmt.simpleplayer.data.TrackSearchResult" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:layout_margin="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/album_img"
+                android:layout_width="@dimen/card_img_size"
+                android:layout_height="@dimen/card_img_size"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="16dp"
+                android:src="@{track.artworkUrl100}" />
+
+            <TextView
+                android:id="@+id/artist_name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/album_img"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="24sp"
+                android:text="@{track.artistName}"
+                />
+
+            <TextView
+                android:id="@+id/song_name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/artist_name_text"
+                android:layout_toRightOf="@+id/album_img"
+                android:textColor="@color/card_additional_Color"
+                android:textSize="12sp"
+                android:text="@{track.trackName}"
+                />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

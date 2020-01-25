@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SimplePlayer</string>
+    <string name="search_hint">Enter what you wanna find...</string>
+</resources>
